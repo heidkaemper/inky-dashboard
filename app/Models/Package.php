@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Package extends Model
 {
+    protected $fillable = [
+        'name',
+        'source',
+    ];
+
     public function downloads(): HasMany
     {
         return $this->hasMany(Download::class);
